@@ -1,0 +1,9 @@
+.connect {
+  display: table;
+  list-style: none;
+}
+
+.connect li {
+  display: table-cell;
+  padding: 5px;
+}

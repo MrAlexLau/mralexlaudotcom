@@ -1,0 +1,202 @@
+$main-diameter: 100px;
+$orbit-z-index: 1;
+$planet-diameter: $main-diameter - 30px;
+$planet-radius: $planet-diameter / 2;
+$planet-border-thickness: 3px;
+$planet-margin: $planet-diameter / 2 + $planet-border-thickness;
+$planet-z-index: 2;
+$planet-details-z-index: 3;
+
+@mixin scale($amount) {
+  transform:scale($amount);
+  -ms-transform:scale($amount); /* IE 9 */
+  -moz-transform:scale($amount); /* Firefox */
+  -webkit-transform:scale($amount); /* Safari and Chrome */
+  -o-transform:scale($amount); /* Opera */
+}
+
+.circle {
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border: 3px solid rgb(88, 88, 88);
+  border-radius: 50px;
+
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.main.circle {
+  background-color: rgb(163, 202, 206);
+  background-image: url('/images/logo-70.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: $main-diameter;
+  position: absolute;
+  width: $main-diameter;
+}
+
+.zoom-effect {
+  @include scale(20);
+  transition: all 1.5s ease;
+}
+
+.orbit {
+  -moz-border-radius: 125px;
+  -webkit-border-radius: 125px;
+  border: 3px dashed rgb(88, 88, 88);
+  border-radius: 125px;
+  height: 250px;
+  width: 250px;
+  z-index: $orbit-z-index;
+
+}
+
+.circle {
+  height: $planet-diameter;
+  width: $planet-diameter;
+  z-index: $planet-z-index;
+
+  .inner {
+    text-align: center;
+    padding-top: $planet-radius * 0.75;
+  }
+
+  &:selected {
+    @include scale(1.5);
+  }
+}
+
+.skills {
+  background-color: rgb(163, 202, 206);
+  bottom: 0;
+  left: 50%;
+  margin-left: (-1 * $planet-margin);
+  position: absolute;
+  margin-bottom: -1 * $planet-radius;
+}
+
+.skills-details {
+  display: none;
+  height: 100%;
+  width: 100%;
+  z-index: $planet-details-z-index;
+}
+
+.connect {
+  background-color: rgb(163, 202, 206);
+  margin-left: -1 * $planet-radius;
+  margin-top: (-1 * $planet-margin);
+  position: absolute;
+  top: 50%;
+}
+
+.career {
+  background-color: rgb(163, 202, 206);
+  left: 50%;
+  margin-left: (-1 * $planet-margin);
+  position: absolute;
+  margin-top: -1 * $planet-radius;
+}
+
+
+.projects {
+  background-color: rgb(163, 202, 206);
+  margin-right: -1 * $planet-radius;
+  margin-top: (-1 * $planet-margin);
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.absolute-center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.menu {
+  height: 100%;
+  min-height: 320px;
+  min-width: 320px;
+  width: 100%;
+}
+
+@-webkit-keyframes rotate {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes rotate {
+    from {-moz-transform: rotate(0deg);}
+    to {-moz-transform: rotate(360deg);}
+}
+@-webkit-keyframes reverse-rotate {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(-360deg);}
+}
+
+@-moz-keyframes reverse-rotate {
+    from {-moz-transform: rotate(0deg);}
+    to {-moz-transform: rotate(-360deg);}
+}
+
+@-moz-keyframes no-rotate {
+    from {-moz-transform: rotate(0deg);}
+    to {-moz-transform: rotate(0deg);}
+}
+
+
+.orbit {
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 60s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: rotate;
+  -moz-animation-duration: 60s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+
+
+  .inner {
+
+    -webkit-animation-name: reverse-rotate;
+    -webkit-animation-duration: 60s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: reverse-rotate;
+    -moz-animation-duration: 60s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+  }
+
+
+  &:hover .inner {
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+  }
+
+  &:hover {
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+  }
+}
+
+.paused {
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+
+
+
+
+// body {
+//   background-color: white;
+//   height: 100%;
+
+//   @media (min-width: 500px) {
+//     background-color: white;
+//   }
+// }
