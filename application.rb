@@ -1,5 +1,7 @@
 require 'sinatra'
 
-get '/' do
-  erb :application
+class MrAlexLauApp < Sinatra::Base
+  get '/' do
+    erb :application
+  end
 end
