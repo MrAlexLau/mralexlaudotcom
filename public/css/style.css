@@ -1,14 +1,14 @@
-.circle {
+.circle, .planet {
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border: 3px solid #585858;
   border-radius: 50px; }
-  .circle a {
+  .circle a, .planet a {
     display: block;
     height: 100%;
     width: 100%; }
 
-.main.circle {
+.main.circle, .main.planet {
   background-color: #a3cace;
   background-image: url("/images/logo-70.png");
   background-position: center center;
@@ -29,6 +29,18 @@
   /* Opera */
   transition: all 1.5s ease; }
 
+.zoom-out-effect {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  /* IE 9 */
+  -moz-transform: scale(1);
+  /* Firefox */
+  -webkit-transform: scale(1);
+  /* Safari and Chrome */
+  -o-transform: scale(1);
+  /* Opera */
+  transition: all 1.5s ease; }
+
 .orbit {
   -moz-border-radius: 125px;
   -webkit-border-radius: 125px;
@@ -38,14 +50,14 @@
   width: 250px;
   z-index: 1; }
 
-.circle {
+.circle, .planet {
   height: 70px;
   width: 70px;
   z-index: 2; }
-  .circle .inner {
+  .circle .inner, .planet .inner {
     text-align: center;
     padding-top: 26.25px; }
-  .circle:selected {
+  .circle:selected, .planet:selected {
     transform: scale(1.5);
     -ms-transform: scale(1.5);
     /* IE 9 */
@@ -64,7 +76,7 @@
   position: absolute;
   margin-bottom: -35px; }
 
-.skills-details {
+.details {
   display: none;
   height: 100%;
   width: 100%;
