@@ -34,9 +34,10 @@ body {
         padding-right: 0; }
 
 .description {
+  color: #216274;
   font-family: 'Open Sans', sans-serif; }
 
-.main-content {
+.main-content, .site-footer {
   margin: auto;
   width: 80%; }
 
@@ -65,3 +66,18 @@ body {
 .section-heading {
   color: #216274;
   font-weight: bold; }
+
+.site-footer {
+  border-top: 1px solid #949494;
+  line-height: 96px;
+  margin-top: 96px;
+  min-height: 96px;
+  text-align: center; }
+  .site-footer .connect a {
+    border-right: 1px solid #949494;
+    color: #949494;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 1em;
+    text-decoration: none; }
+    .site-footer .connect a:last-child {
+      border-right: none; }

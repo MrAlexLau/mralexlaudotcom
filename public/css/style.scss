@@ -5,9 +5,10 @@
 // variables
 $base-font-size: 16px;
 $base-line-height: $base-font-size * 1.5;
+$footer-color: #949494;
 $gutter: 1em;
 $primary-dark-color: #223D5A;
-$primary-light-color: #216274;
+$secondary-dark-color: #216274;
 
 // styles
 body {
@@ -58,10 +59,11 @@ body {
 }
 
 .description {
+  color: $secondary-dark-color;
   font-family: 'Open Sans', sans-serif;
 }
 
-.main-content {
+.main-content, .site-footer {
   margin: auto;
   width: 80%;
 }
@@ -96,7 +98,28 @@ body {
 }
 
 .section-heading {
-  color: $primary-light-color;
+  color: $secondary-dark-color;
   font-weight: bold;
+}
+
+
+.site-footer {
+  border-top: 1px solid $footer-color;
+  line-height: $base-line-height * 4;
+  margin-top: $base-line-height * 4;
+  min-height: $base-line-height * 4;
+  text-align: center;
+
+  .connect a {
+    border-right: 1px solid $footer-color;
+    color: $footer-color;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 $gutter;
+    text-decoration: none;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
 }
 
