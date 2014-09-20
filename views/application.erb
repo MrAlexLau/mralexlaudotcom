@@ -1,116 +1,122 @@
-<div class="menu">
-  <a data-section="about" href="#">About</a>
-  <a data-section="connect" href="#">Connect</a>
-  <a data-section="skills" href="#">Skills</a>
-  <a data-section="career" href="#">Career</a>
-  <a data-section="projects" href="#">Projects</a>
-</div>
+<div class='main-content'>
+  <div class='profile-container'>
+    <img src='/images/profile.jpg' class='profile-picture'></img>
+  </div>
 
-<div class="about-details details default">
-  <h3>About Me</h3>
-  <div>
-    I studied computer science at the University of Minnesota and have been working as a software developer in Austin, TX since 2012. In my free time, I enjoy being outside running, biking, or playing in a social volleyball league. But you can also find me nerding out at tech meetups, playing Settlers of Catan, or belting your least-favorite-boy-band-song at a local karaoke dive.
+  <div class="menu">
+    <a data-section="about" href="#"><div class="selected">About</div></a>
+    <a data-section="connect" href="#"><div>Connect</div></a>
+    <a data-section="experience" href="#"><div>Experience</div></a>
+    <a data-section="projects" href="#"><div>Projects</div></a>
+  </div>
+
+  <div class="about-details details selected">
+    <h3 class="section-heading">About Me</h3>
+    <div class="description">
+      I studied computer science at the University of Minnesota and have been working as a software developer in Austin, TX since 2012. In my free time, I enjoy being outside running, biking, or playing in a social volleyball league. But you can also find me nerding out at tech meetups, playing Settlers of Catan, or belting your least-favorite-boy-band-song at a local karaoke dive.
+    </div>
+  </div>
+
+  <div class="skills-details details">
+    <h3>Skills</h3>
+    <ul>
+      <li>Ruby</li>
+      <li>Rails</li>
+      <li>RSpec</li>
+      <li>HTML</li>
+      <li>Javascript</li>
+      <li>CSS</li>
+      <li>Git</li>
+      <li>MYSQL</li>
+    </ul>
+  </div>
+
+  <div class="connect-details details">
+    <h3>Connect</h3>
+    <ul>
+      <li>
+        <a href='http://www.twitter.com/mralexlau'>Twitter</a>
+      </li>
+      <li>
+        <a href='https://www.linkedin.com/pub/alex-lau/56/1a8/52'>LinkedIn</a>
+      </li>
+      <li>
+        <a href='http://stackoverflow.com/users/2339716/mralexlau'>Stackoverflow</a>
+      </li>
+      <li>
+        <a href='https://github.com/mralexlau'>Github</a>
+      </li>
+      <li>
+        <a href='https://coderwall.com/mralexlau'>Coderwall</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="projects-details details">
+    <h3>Side Projects</h3>
+    <ul>
+      <li>
+        <a href='http://www.bitsonbitsonbits.com'>Bits on Bits on Bits</a>
+        <div class='description'>
+          This is where I keep a lot of snippets of code and write blog posts once in a while. The goal of this project is to have one centralized location where I can reference code quickly.
+        </div>
+      </li>
+      <li>
+        <a href='https://github.com/MrAlexLau/braise'>Braise Gem for Ruby</a>
+        <div class='description'>
+          A humble little ruby gem I wrote that provides colorful terminal messages when raising exceptions. It's meant to be used as a development tool when the better_errors gem won't suffice.
+        </div>
+      </li>
+      <li>
+        <a href='http://www.hipjoin.com'>Hipjoin</a>
+        <div class='description'>
+          Hipjoin is a Rails app that lets users easily share a timeline of events they're attending. As part of a hackathon, I added Twilio integration so events can be added via text message.
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="experience-details details">
+    <h3>Experience</h3>
+    <article>
+      <h4>Get Satisfaction</h4>
+      <h6>December 2013 - Present</h6>
+
+      <ul>
+        <li>Ruby on Rails development for online communities visited by millions of users each month</li>
+        <li>Brainstorm and implement new website features (eg - adding style injection to our Rails project) during company hackdays</li>
+        <li>Code review pull requests in Github</li>
+      </ul>
+    </article>
+
+    <article>
+      <h4>Speakerpedia</h4>
+      <h6>January 2013 - September 2013</h6>
+
+      <ul>
+        <li>Research, test, and develop code for a custom in-house CRM</li>
+        <li>Collaborate with talent agents to oversee features and bug fixes for a custom CRM on a daily basis</li>
+        <li>Exemplify best practices in coding by providing guidelines for tracking issues in GitHub and unit testing</li>
+        <li>Wrote a node.js message server to save company from paying monthly fees to an external service</li>
+      </ul>
+    </article>
+
+    <article>
+      <h4>General Mills</h4>
+      <h6>June 2007 - December 2012</h6>
+
+      <ul>
+        <li>
+          Support and develop a wide variety of .NET applications
+        </li>
+        <li>
+          Wrote code which optimized thousands of sales orders by adding critical supply chain automations in SAP
+        </li>
+        <li>
+          Promoted twice within 3 years
+        </li>
+      </ul>
+    </article>
   </div>
 </div>
 
-<div class="skills-details details">
-  <h3>Skills</h3>
-  <ul>
-    <li>Ruby</li>
-    <li>Rails</li>
-    <li>RSpec</li>
-    <li>HTML</li>
-    <li>Javascript</li>
-    <li>CSS</li>
-    <li>Git</li>
-    <li>MYSQL</li>
-  </ul>
-</div>
-
-<div class="connect-details details">
-  <h3>Connect</h3>
-  <ul>
-    <li>
-      <a href='http://www.twitter.com/mralexlau'>Twitter</a>
-    </li>
-    <li>
-      <a href='https://www.linkedin.com/pub/alex-lau/56/1a8/52'>LinkedIn</a>
-    </li>
-    <li>
-      <a href='http://stackoverflow.com/users/2339716/mralexlau'>Stackoverflow</a>
-    </li>
-    <li>
-      <a href='https://github.com/mralexlau'>Github</a>
-    </li>
-    <li>
-      <a href='https://coderwall.com/mralexlau'>Coderwall</a>
-    </li>
-  </ul>
-</div>
-
-<div class="projects-details details">
-  <h3>Side Projects</h3>
-  <ul>
-    <li>
-      <a href='http://www.bitsonbitsonbits.com'>Bits on Bits on Bits</a>
-      <div class='description'>
-        This is where I keep a lot of snippets of code and write blog posts once in a while. The goal of this project is to have one centralized location where I can reference code quickly.
-      </div>
-    </li>
-    <li>
-      <a href='https://github.com/MrAlexLau/braise'>Braise Gem for Ruby</a>
-      <div class='description'>
-        A humble little ruby gem I wrote that provides colorful terminal messages when raising exceptions. It's meant to be used as a development tool when the better_errors gem won't suffice.
-      </div>
-    </li>
-    <li>
-      <a href='http://www.hipjoin.com'>Hipjoin</a>
-      <div class='description'>
-        Hipjoin is a Rails app that lets users easily share a timeline of events they're attending. As part of a hackathon, I added Twilio integration so events can be added via text message.
-      </div>
-    </li>
-  </ul>
-</div>
-
-<div class="career-details details">
-  <h3>Career</h3>
-  <article>
-    <h4>Get Satisfaction</h4>
-    <h6>December 2013 - Present</h6>
-
-    <ul>
-      <li>Ruby on Rails development for online communities visited by millions of users each month</li>
-      <li>Brainstorm and implement new website features (eg - adding style injection to our Rails project) during company hackdays</li>
-      <li>Code review pull requests in Github</li>
-    </ul>
-  </article>
-
-  <article>
-    <h4>Speakerpedia</h4>
-    <h6>January 2013 - September 2013</h6>
-
-    <ul>
-      <li>Research, test, and develop code for a custom in-house CRM</li>
-      <li>Collaborate with talent agents to oversee features and bug fixes for a custom CRM on a daily basis</li>
-      <li>Exemplify best practices in coding by providing guidelines for tracking issues in GitHub and unit testing</li>
-      <li>Wrote a node.js message server to save company from paying monthly fees to an external service</li>
-    </ul>
-  </article>
-
-  <article>
-    <h4>General Mills</h4>
-    <h6>June 2007 - Present</h6>
-
-    <ul>
-      <li>
-        Support and develop a wide variety of .NET applications
-      </li>
-      <li>
-        Wrote code which optimized thousands of sales orders by adding critical supply chain automations in SAP
-      </li>
-      <li>
-        Promoted twice within 3 years
-      </li>
-    </ul>
-  </article>
-</div>

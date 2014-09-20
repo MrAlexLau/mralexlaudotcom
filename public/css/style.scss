@@ -1,6 +1,21 @@
+// imports
+@import url(http://fonts.googleapis.com/css?family=Bitter:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600italic,400);
+
+// variables
+$base-font-size: 16px;
+$base-line-height: $base-font-size * 1.5;
+$gutter: 1em;
+$primary-dark-color: #223D5A;
+$primary-light-color: #216274;
+
+// styles
 body {
   background-color: white;
+  font-family: 'Bitter', serif;
+  font-size: $base-font-size;
   height: 100%;
+  margin: 0;
 
   @media (min-width: 500px) {
     background-color: white;
@@ -10,7 +25,78 @@ body {
 .details {
   display: none;
 
-  &.default {
+  &.selected {
     display: block;
   }
 }
+
+.header {
+  background-color: $primary-dark-color;
+  line-height: $base-line-height * 2;
+  min-height: $base-line-height * 2;
+  padding: 0 ($gutter * 2);
+
+  .message {
+    color: #FFFFFF;
+    float: left;
+    font-size: $base-font-size * 1.5;
+    font-style: italic;
+  }
+
+  .connect {
+    text-align: right;
+
+    a {
+      color: #FFFFFF;
+      padding-right: $gutter;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.description {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.main-content {
+  margin: auto;
+  width: 80%;
+}
+
+.profile-container {
+  margin-top: $base-line-height * 2;
+  text-align: center;
+
+  .profile-picture {
+    border-radius: 50%;
+    width: 300px;
+  }
+}
+
+.menu {
+  text-align: center;
+
+  .selected {
+    background-color: $primary-dark-color;
+    color: #FFFFFF;
+  }
+}
+
+.menu a div {
+  border: 1px solid $primary-dark-color;
+  color: $primary-dark-color;
+  display: inline-block;
+  margin: $base-line-height ($gutter / 2);
+  padding: ($gutter / 2) ($gutter * 1.5);
+  text-decoration: none;
+  width: 100px;
+}
+
+.section-heading {
+  color: $primary-light-color;
+  font-weight: bold;
+}
+

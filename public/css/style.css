@@ -1,11 +1,67 @@
+@import url(http://fonts.googleapis.com/css?family=Bitter:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600italic,400);
 body {
   background-color: white;
-  height: 100%; }
+  font-family: 'Bitter', serif;
+  font-size: 16px;
+  height: 100%;
+  margin: 0; }
   @media (min-width: 500px) {
     body {
       background-color: white; } }
 
 .details {
   display: none; }
-  .details.default {
+  .details.selected {
     display: block; }
+
+.header {
+  background-color: #223d5a;
+  line-height: 48px;
+  min-height: 48px;
+  padding: 0 2em; }
+  .header .message {
+    color: #FFFFFF;
+    float: left;
+    font-size: 24px;
+    font-style: italic; }
+  .header .connect {
+    text-align: right; }
+    .header .connect a {
+      color: #FFFFFF;
+      padding-right: 1em; }
+      .header .connect a:last-child {
+        padding-right: 0; }
+
+.description {
+  font-family: 'Open Sans', sans-serif; }
+
+.main-content {
+  margin: auto;
+  width: 80%; }
+
+.profile-container {
+  margin-top: 48px;
+  text-align: center; }
+  .profile-container .profile-picture {
+    border-radius: 50%;
+    width: 300px; }
+
+.menu {
+  text-align: center; }
+  .menu .selected {
+    background-color: #223d5a;
+    color: #FFFFFF; }
+
+.menu a div {
+  border: 1px solid #223d5a;
+  color: #223d5a;
+  display: inline-block;
+  margin: 24px 0.5em;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  width: 100px; }
+
+.section-heading {
+  color: #216274;
+  font-weight: bold; }
