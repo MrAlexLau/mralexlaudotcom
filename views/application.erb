@@ -1,11 +1,12 @@
 <div class="menu">
-  <a data-section="about" href="javascript:;">About</a>
-  <a data-section="connect" href="javascript:;">Connect</a>
-  <a data-section="career" href="javascript:;">Career</a>
-  <a data-section="projects" href="javascript:;">Projects</a>
+  <a data-section="about" href="#">About</a>
+  <a data-section="connect" href="#">Connect</a>
+  <a data-section="skills" href="#">Skills</a>
+  <a data-section="career" href="#">Career</a>
+  <a data-section="projects" href="#">Projects</a>
 </div>
 
-<div class="about-details details">
+<div class="about-details details default">
   <h3>About Me</h3>
   <div>
     I studied computer science at the University of Minnesota and have been working as a software developer in Austin, TX since 2012. In my free time, I enjoy being outside running, biking, or playing in a social volleyball league. But you can also find me nerding out at tech meetups, playing Settlers of Catan, or belting your least-favorite-boy-band-song at a local karaoke dive.
@@ -52,12 +53,21 @@
   <ul>
     <li>
       <a href='http://www.bitsonbitsonbits.com'>Bits on Bits on Bits</a>
+      <div class='description'>
+        This is where I keep a lot of snippets of code and write blog posts once in a while. The goal of this project is to have one centralized location where I can reference code quickly.
+      </div>
     </li>
     <li>
       <a href='https://github.com/MrAlexLau/braise'>Braise Gem for Ruby</a>
+      <div class='description'>
+        A humble little ruby gem I wrote that provides colorful terminal messages when raising exceptions. It's meant to be used as a development tool when the better_errors gem won't suffice.
+      </div>
     </li>
     <li>
       <a href='http://www.hipjoin.com'>Hipjoin</a>
+      <div class='description'>
+        Hipjoin is a Rails app that lets users easily share a timeline of events they're attending. As part of a hackathon, I added Twilio integration so events can be added via text message.
+      </div>
     </li>
   </ul>
 </div>

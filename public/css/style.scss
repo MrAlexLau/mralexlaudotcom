@@ -9,4 +9,8 @@ body {
 
 .details {
   display: none;
+
+  &.default {
+    display: block;
+  }
 }

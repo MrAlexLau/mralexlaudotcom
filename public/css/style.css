@@ -7,3 +7,5 @@ body {
 
 .details {
   display: none; }
+  .details.default {
+    display: block; }

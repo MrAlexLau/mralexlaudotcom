@@ -6,6 +6,7 @@ var showDetails = function(sectionName) {
 
 // events
 $('.menu a').on('click', function(event) {
- showDetails($(event.target).data('section'));
+  event.preventDefault();
+  showDetails($(event.target).data('section'));
 });
 
