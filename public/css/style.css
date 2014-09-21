@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:600italic,400);
 body {
   background-color: white;
-  font-family: 'Bitter', serif;
+  font-family: "Bitter", serif;
   font-size: 16px;
   height: 100%;
   margin: 0; }
@@ -35,7 +35,7 @@ body {
 
 .description {
   color: #216274;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 .main-content, .site-footer {
   margin: auto;
@@ -67,6 +67,36 @@ body {
   color: #216274;
   font-weight: bold; }
 
+.experience-details {
+  margin: auto;
+  position: relative;
+  width: 80%; }
+  .experience-details article {
+    margin: 24px 0; }
+  .experience-details .company-name {
+    font-family: "Bitter", serif;
+    font-size: 28px;
+    margin-bottom: 6px;
+    margin-top: 0; }
+  .experience-details .tenure {
+    color: #424242;
+    font-style: italic;
+    margin: 0;
+    opacity: 0.8; }
+  .experience-details .company-icon {
+    background-color: #216274;
+    float: left;
+    height: 200px;
+    position: absolute;
+    width: 200px; }
+    .experience-details .company-icon img {
+      height: 200px;
+      width: 200px; }
+  .experience-details .description {
+    display: inline-block;
+    margin-left: 200px;
+    padding-left: 1em; }
+
 .site-footer {
   border-top: 1px solid #949494;
   line-height: 96px;
@@ -76,7 +106,7 @@ body {
   .site-footer .connect a {
     border-right: 1px solid #949494;
     color: #949494;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     padding: 0 1em;
     text-decoration: none; }
     .site-footer .connect a:last-child {

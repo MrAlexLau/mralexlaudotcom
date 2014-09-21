@@ -5,15 +5,18 @@
 // variables
 $base-font-size: 16px;
 $base-line-height: $base-font-size * 1.5;
+$base-text-color: #424242;
 $footer-color: #949494;
 $gutter: 1em;
 $primary-dark-color: #223D5A;
+$primary-serif-font: 'Bitter', serif;
+$primary-sans-serif-font: 'Open Sans', sans-serif;
 $secondary-dark-color: #216274;
 
 // styles
 body {
   background-color: white;
-  font-family: 'Bitter', serif;
+  font-family: $primary-serif-font;
   font-size: $base-font-size;
   height: 100%;
   margin: 0;
@@ -60,7 +63,7 @@ body {
 
 .description {
   color: $secondary-dark-color;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $primary-sans-serif-font;
 }
 
 .main-content, .site-footer {
@@ -102,6 +105,49 @@ body {
   font-weight: bold;
 }
 
+.experience-details {
+  margin: auto;
+  position: relative;
+  width: 80%;
+
+  article {
+    margin: $base-line-height 0;
+  }
+
+  .company-name {
+    font-family: $primary-serif-font;
+    font-size: $base-font-size * 1.75;
+    margin-bottom: $base-line-height / 4;
+    margin-top: 0;
+  }
+
+  .tenure {
+    color: $base-text-color;
+    font-style: italic;
+    margin: 0;
+    opacity: 0.8;
+  }
+
+  .company-icon {
+    background-color: $secondary-dark-color;
+    float: left;
+    height: 200px;
+    position: absolute;
+    width: 200px;
+
+    img {
+      height: 200px;
+      width: 200px;
+    }
+  }
+
+  .description {
+    display: inline-block;
+    margin-left: 200px;
+    padding-left: $gutter;
+  }
+}
+
 
 .site-footer {
   border-top: 1px solid $footer-color;
@@ -113,7 +159,7 @@ body {
   .connect a {
     border-right: 1px solid $footer-color;
     color: $footer-color;
-    font-family: 'Open Sans', sans-serif;
+    font-family: $primary-sans-serif-font;
     padding: 0 $gutter;
     text-decoration: none;
 
