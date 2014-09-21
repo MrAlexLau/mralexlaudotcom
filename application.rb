@@ -24,3 +24,4 @@ class MrAlexLauApp < Sinatra::Base
     redirect "/?message_status=#{status}"
   end
 end
+
