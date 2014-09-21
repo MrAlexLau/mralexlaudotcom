@@ -2,6 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:600italic,400);
 body {
   background-color: white;
+  color: #424242;
   font-family: "Bitter", serif;
   font-size: 16px;
   height: 100%;
@@ -67,35 +68,69 @@ body {
   color: #216274;
   font-weight: bold; }
 
-.experience-details {
+.projects-details article {
+  display: table;
+  width: 100%; }
+  .projects-details article .overview, .projects-details article .skills {
+    display: table-cell; }
+  .projects-details article .overview {
+    padding-right: 1em;
+    width: 70%; }
+  .projects-details article .skills {
+    border-left: 1px solid #949494;
+    padding-left: 1em;
+    width: 30%; }
+    .projects-details article .skills ul {
+      padding: 0.5em; }
+    .projects-details article .skills li {
+      list-style-type: none;
+      margin-bottom: 12px; }
+.projects-details a {
+  text-decoration: none;
+  color: #216274; }
+.projects-details .project-title {
+  font-family: "Bitter", serif;
+  font-size: 28px;
+  margin: 0; }
+.projects-details .project-subtitle {
+  color: #424242;
+  font-style: italic;
+  margin: 0;
+  margin-bottom: 12px;
+  opacity: 0.8; }
+
+.experience-details,
+.projects-details {
   margin: auto;
   position: relative;
   width: 80%; }
-  .experience-details article {
+  .experience-details article,
+  .projects-details article {
     margin: 24px 0; }
-  .experience-details .company-name {
-    font-family: "Bitter", serif;
-    font-size: 28px;
-    margin-bottom: 6px;
-    margin-top: 0; }
-  .experience-details .tenure {
-    color: #424242;
-    font-style: italic;
-    margin: 0;
-    opacity: 0.8; }
-  .experience-details .company-icon {
-    background-color: #216274;
-    float: left;
+
+.experience-details .company-name {
+  font-family: "Bitter", serif;
+  font-size: 28px;
+  margin-bottom: 6px;
+  margin-top: 0; }
+.experience-details .tenure {
+  color: #424242;
+  font-style: italic;
+  margin: 0;
+  opacity: 0.8; }
+.experience-details .company-icon {
+  background-color: #216274;
+  float: left;
+  height: 200px;
+  position: absolute;
+  width: 200px; }
+  .experience-details .company-icon img {
     height: 200px;
-    position: absolute;
     width: 200px; }
-    .experience-details .company-icon img {
-      height: 200px;
-      width: 200px; }
-  .experience-details .description {
-    display: inline-block;
-    margin-left: 200px;
-    padding-left: 1em; }
+.experience-details .description {
+  display: inline-block;
+  margin-left: 200px;
+  padding-left: 1em; }
 
 .site-footer {
   border-top: 1px solid #949494;

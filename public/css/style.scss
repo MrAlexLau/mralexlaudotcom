@@ -16,6 +16,7 @@ $secondary-dark-color: #216274;
 // styles
 body {
   background-color: white;
+  color: $base-text-color;
   font-family: $primary-serif-font;
   font-size: $base-font-size;
   height: 100%;
@@ -105,7 +106,58 @@ body {
   font-weight: bold;
 }
 
-.experience-details {
+.projects-details {
+  article {
+    display: table;
+    width: 100%;
+
+    .overview, .skills {
+      display: table-cell;
+    }
+
+    .overview {
+      padding-right: $gutter;
+      width: 70%;
+    }
+
+    .skills {
+      border-left: 1px solid $footer-color;
+      padding-left: $gutter;
+      width: 30%;
+
+      ul {
+        padding: $gutter / 2;
+      }
+
+      li {
+        list-style-type: none;
+        margin-bottom: $base-line-height / 2;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $secondary-dark-color;
+  }
+
+  .project-title {
+    font-family: $primary-serif-font;
+    font-size: $base-font-size * 1.75;
+    margin: 0;
+  }
+
+  .project-subtitle {
+    color: $base-text-color;
+    font-style: italic;
+    margin: 0;
+    margin-bottom: $base-line-height / 2;
+    opacity: 0.8;
+  }
+}
+
+.experience-details,
+.projects-details {
   margin: auto;
   position: relative;
   width: 80%;
@@ -113,7 +165,9 @@ body {
   article {
     margin: $base-line-height 0;
   }
+}
 
+.experience-details {
   .company-name {
     font-family: $primary-serif-font;
     font-size: $base-font-size * 1.75;
