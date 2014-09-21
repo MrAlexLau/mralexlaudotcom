@@ -269,6 +269,9 @@ body {
    font-size: $base-font-size;
    padding: ($base-line-height / 2) $gutter;
 
+   &:hover {
+     cursor: pointer;
+   }
   }
 }
 
