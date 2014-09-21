@@ -7,9 +7,6 @@ body {
   font-size: 16px;
   height: 100%;
   margin: 0; }
-  @media (min-width: 500px) {
-    body {
-      background-color: white; } }
 
 .details {
   display: none; }
@@ -20,7 +17,10 @@ body {
   background-color: #223d5a;
   line-height: 48px;
   min-height: 48px;
-  padding: 0 2em; }
+  padding: 0 1em; }
+  @media (min-width: 540px) {
+    .header {
+      padding: 0 2em; } }
   .header .message {
     color: #FFFFFF;
     float: left;
@@ -57,18 +57,20 @@ body {
 
 .main-content {
   margin: auto;
-  width: 60%; }
-
-.site-footer {
-  margin: auto;
-  width: 80%; }
+  width: 90%; }
+  @media (min-width: 540px) {
+    .main-content {
+      width: 60%; } }
 
 .profile-container {
   margin-top: 48px;
   text-align: center; }
   .profile-container .profile-picture {
     border-radius: 50%;
-    width: 300px; }
+    width: 200px; }
+    @media (min-width: 540px) {
+      .profile-container .profile-picture {
+        width: 300px; } }
 
 .menu {
   text-align: center; }
@@ -80,10 +82,14 @@ body {
   border: 1px solid #223d5a;
   color: #223d5a;
   display: inline-block;
-  margin: 24px 0.5em;
+  margin: 12px 0.125em;
   padding: 0.5em 1.5em;
   text-decoration: none;
-  width: 100px; }
+  width: 75px; }
+  @media (min-width: 540px) {
+    .menu a div {
+      margin: 24px 0.5em;
+      width: 100px; } }
 
 .section-heading {
   color: #216274;
@@ -181,15 +187,26 @@ body {
 
 .site-footer {
   border-top: 1px solid #949494;
-  line-height: 96px;
-  margin-top: 96px;
+  line-height: 36px;
+  margin: auto;
+  margin-top: 24px;
   min-height: 96px;
-  text-align: center; }
+  padding-top: 12px;
+  text-align: center;
+  width: 90%; }
+  @media (min-width: 540px) {
+    .site-footer {
+      line-height: 96px;
+      margin-top: 96px;
+      width: 80%; } }
   .site-footer .connect a {
-    border-right: 1px solid #949494;
     color: #949494;
     font-family: "Open Sans", sans-serif;
-    padding: 0 1em;
+    padding: 0 0.5em;
     text-decoration: none; }
+    @media (min-width: 540px) {
+      .site-footer .connect a {
+        border-right: 1px solid #949494;
+        padding: 0 1em; } }
     .site-footer .connect a:last-child {
       border-right: none; }

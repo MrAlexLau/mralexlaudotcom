@@ -8,6 +8,7 @@ $base-line-height: $base-font-size * 1.5;
 $base-text-color: #424242;
 $footer-color: #949494;
 $gutter: 1em;
+$medium-screen: 540px;
 $primary-dark-color: #223D5A;
 $primary-light-color: #2B8A8E;
 $primary-serif-font: 'Bitter', serif;
@@ -22,10 +23,6 @@ body {
   font-size: $base-font-size;
   height: 100%;
   margin: 0;
-
-  @media (min-width: 500px) {
-    background-color: white;
-  }
 }
 
 .details {
@@ -40,7 +37,11 @@ body {
   background-color: $primary-dark-color;
   line-height: $base-line-height * 2;
   min-height: $base-line-height * 2;
-  padding: 0 ($gutter * 2);
+  padding: 0 $gutter;
+
+  @media (min-width: $medium-screen) {
+    padding: 0 ($gutter * 2);
+  }
 
   .message {
     color: #FFFFFF;
@@ -94,12 +95,11 @@ body {
 
 .main-content {
   margin: auto;
-  width: 60%;
-}
+  width: 90%;
 
-.site-footer {
-  margin: auto;
-  width: 80%;
+  @media (min-width: $medium-screen) {
+    width: 60%;
+  }
 }
 
 .profile-container {
@@ -108,7 +108,11 @@ body {
 
   .profile-picture {
     border-radius: 50%;
-    width: 300px;
+    width: 200px;
+
+    @media (min-width: $medium-screen) {
+      width: 300px;
+    }
   }
 }
 
@@ -125,10 +129,15 @@ body {
   border: 1px solid $primary-dark-color;
   color: $primary-dark-color;
   display: inline-block;
-  margin: $base-line-height ($gutter / 2);
+  margin: ($base-line-height / 2) ($gutter / 8);
   padding: ($gutter / 2) ($gutter * 1.5);
   text-decoration: none;
-  width: 100px;
+  width: 75px;
+
+  @media (min-width: $medium-screen) {
+    margin: $base-line-height ($gutter / 2);
+    width: 100px;
+  }
 }
 
 .section-heading {
@@ -277,17 +286,30 @@ body {
 
 .site-footer {
   border-top: 1px solid $footer-color;
-  line-height: $base-line-height * 4;
-  margin-top: $base-line-height * 4;
+  line-height: $base-line-height * 1.5;
+  margin: auto;
+  margin-top: $base-line-height;
   min-height: $base-line-height * 4;
+  padding-top: $base-line-height / 2;
   text-align: center;
+  width: 90%;
+
+  @media (min-width: $medium-screen) {
+    line-height: $base-line-height * 4;
+    margin-top: $base-line-height * 4;
+    width: 80%;
+  }
 
   .connect a {
-    border-right: 1px solid $footer-color;
     color: $footer-color;
     font-family: $primary-sans-serif-font;
-    padding: 0 $gutter;
+    padding: 0 ($gutter / 2);
     text-decoration: none;
+
+    @media (min-width: $medium-screen) {
+      border-right: 1px solid $footer-color;
+      padding: 0 $gutter;
+    }
 
     &:last-child {
       border-right: none;
