@@ -17,6 +17,20 @@
       </div>
     </div>
 
+    <% if params['message_status'] && params['message_status'] == 'success' %>
+      <div class="notice">
+        <span class="success">
+          Message sent, thanks!
+        </span>
+      </div>
+    <% elsif params['message_status'] && params['message_status'] == 'error' %>
+      <div class="notice">
+        <span class="error">
+          Message not sent! Please enter a valid email address.
+        </span>
+      </div>
+    <% end %>
+
     <%= yield %>
 
     <div class="site-footer">

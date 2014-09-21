@@ -9,6 +9,7 @@ $base-text-color: #424242;
 $footer-color: #949494;
 $gutter: 1em;
 $primary-dark-color: #223D5A;
+$primary-light-color: #2B8A8E;
 $primary-serif-font: 'Bitter', serif;
 $primary-sans-serif-font: 'Open Sans', sans-serif;
 $secondary-dark-color: #216274;
@@ -67,7 +68,36 @@ body {
   font-family: $primary-sans-serif-font;
 }
 
-.main-content, .site-footer {
+.notice {
+  margin: auto;
+  text-align: center;
+  margin-top: $base-line-height;
+
+  span {
+    padding: ($base-line-height / 2) $gutter;
+  }
+
+  .success {
+    background-color: #EAFFED;
+    border: 3px solid #485D45;
+    border-radius: 10px;
+    color: #229C33;
+  }
+
+  .error {
+    background-color: #FFF0F0;
+    border: 3px solid #5D4545;
+    border-radius: 10px;
+    color: #A81E1E;
+  }
+}
+
+.main-content {
+  margin: auto;
+  width: 60%;
+}
+
+.site-footer {
   margin: auto;
   width: 80%;
 }
@@ -160,9 +190,7 @@ body {
 
 .experience-details,
 .projects-details {
-  margin: auto;
   position: relative;
-  width: 80%;
 
   article {
     margin: $base-line-height 0;
@@ -170,6 +198,10 @@ body {
 }
 
 .experience-details {
+  article {
+    min-height: 200px;
+  }
+
   .company-name {
     font-family: $primary-serif-font;
     font-size: $base-font-size * 1.75;
@@ -204,6 +236,41 @@ body {
   }
 }
 
+.contact-details {
+  .field {
+    font-family: $primary-sans-serif-font;
+    font-style: italic;
+    margin-top: $base-line-height;
+  }
+
+  .field-input {
+    margin-top: $base-line-height / 4;
+  }
+
+  textarea {
+    min-height: 200px;
+    width: 100%;
+  }
+
+  input[name=email] {
+    width: 30%;
+  }
+
+  input[name=math_answer] {
+    width: 20px;
+  }
+
+  input[type=submit] {
+   background-color: $primary-light-color;
+   color: #FFFFFF;
+   border: 3px solid $primary-dark-color;
+   border-radius: 10px;
+   font-family: $primary-serif-font;
+   font-size: $base-font-size;
+   padding: ($base-line-height / 2) $gutter;
+
+  }
+}
 
 .site-footer {
   border-top: 1px solid $footer-color;
