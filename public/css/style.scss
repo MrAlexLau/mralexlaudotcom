@@ -144,11 +144,13 @@ body {
   .project-title {
     font-family: $primary-serif-font;
     font-size: $base-font-size * 1.75;
-    margin: 0;
+    margin-bottom: $base-line-height / 4;
+    margin-top: 0;
   }
 
   .project-subtitle {
     color: $base-text-color;
+    font-family: $primary-sans-serif-font;
     font-style: italic;
     margin: 0;
     margin-bottom: $base-line-height / 2;

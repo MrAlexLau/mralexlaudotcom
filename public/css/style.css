@@ -91,9 +91,11 @@ body {
 .projects-details .project-title {
   font-family: "Bitter", serif;
   font-size: 28px;
-  margin: 0; }
+  margin-bottom: 6px;
+  margin-top: 0; }
 .projects-details .project-subtitle {
   color: #424242;
+  font-family: "Open Sans", sans-serif;
   font-style: italic;
   margin: 0;
   margin-bottom: 12px;
