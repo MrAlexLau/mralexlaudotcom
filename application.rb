@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'rest_client'
 require 'validates_email_format_of'
+require './env' if File.exists?('env.rb')
 
 class MrAlexLauApp < Sinatra::Base
   get '/' do
