@@ -170,7 +170,7 @@ body {
       list-style-type: none;
     }
 
-    @media (min-width: $large-screen) {
+    @media (min-width: $medium-screen) {
       display: table;
       width: 100%;
 
@@ -317,7 +317,11 @@ body {
   }
 
   input[name=email] {
-    width: 30%;
+    width: 50%;
+
+    @media (min-width: $medium-screen) {
+      width: 30%;
+    }
   }
 
   input[name=math_answer] {

@@ -109,7 +109,7 @@ body {
     display: table-cell; }
 .projects-details article .skills li {
   list-style-type: none; }
-@media (min-width: 1220px) {
+@media (min-width: 768px) {
   .projects-details article {
     display: table;
     width: 100%; }
@@ -202,7 +202,10 @@ body {
   min-height: 200px;
   width: 100%; }
 .contact-details input[name=email] {
-  width: 30%; }
+  width: 50%; }
+  @media (min-width: 768px) {
+    .contact-details input[name=email] {
+      width: 30%; } }
 .contact-details input[name=math_answer] {
   width: 20px; }
 .contact-details input[type=submit] {
