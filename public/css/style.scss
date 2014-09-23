@@ -8,7 +8,8 @@ $base-line-height: $base-font-size * 1.5;
 $base-text-color: #424242;
 $footer-color: #949494;
 $gutter: 1em;
-$medium-screen: 540px;
+$medium-screen: 768px;
+$large-screen: 1220px;
 $primary-dark-color: #223D5A;
 $primary-light-color: #2B8A8E;
 $primary-serif-font: 'Bitter', serif;
@@ -23,11 +24,6 @@ body {
   font-size: $base-font-size;
   height: 100%;
   margin: 0;
-
-  background-color: white;
-  @media (min-width: $medium-screen) {
-    background-color: white;
-  }
 }
 
 .details {
@@ -44,7 +40,7 @@ body {
   min-height: $base-line-height * 2;
   padding: 0 $gutter;
 
-  @media (min-width: $medium-screen) {
+  @media (min-width: $large-screen) {
     padding: 0 ($gutter * 2);
   }
 
@@ -54,7 +50,7 @@ body {
     font-size: $base-font-size;
     font-style: italic;
 
-    @media (min-width: $medium-screen) {
+    @media (min-width: $large-screen) {
       font-size: $base-font-size * 1.5;
     }
   }
@@ -141,9 +137,9 @@ body {
   margin: ($base-line-height / 2) ($gutter / 8);
   padding: ($gutter / 2) ($gutter * 1.5);
   text-decoration: none;
-  width: 75px;
+  width: 85px;
 
-  @media (min-width: $medium-screen) {
+  @media (min-width: $large-screen) {
     margin: $base-line-height ($gutter / 2);
     width: 100px;
   }
@@ -174,7 +170,7 @@ body {
       list-style-type: none;
     }
 
-    @media (min-width: $medium-screen) {
+    @media (min-width: $large-screen) {
       display: table;
       width: 100%;
 
@@ -231,15 +227,11 @@ body {
   position: relative;
 
   article {
-    margin: $base-line-height 0;
+    margin: ($base-line-height * 1.5) 0;
   }
 }
 
 .experience-details {
-  article {
-    min-height: 200px;
-  }
-
   .company-name {
     font-family: $primary-serif-font;
     font-size: $base-font-size * 1.75;
@@ -254,24 +246,58 @@ body {
     opacity: 0.8;
   }
 
-  .company-icon {
-    background-color: $secondary-dark-color;
-    float: left;
-    height: 200px;
-    position: absolute;
-    width: 200px;
+  .description {
+    display: inline-block;
+    margin-left: 75px;
+    padding-left: $gutter;
 
-    img {
-      height: 200px;
-      width: 200px;
+    ul {
+      margin-left: -75px;
+      margin-top: $base-line-height;
     }
   }
 
-  .description {
-    display: inline-block;
-    margin-left: 200px;
-    padding-left: $gutter;
+  .company-icon {
+    background-color: $secondary-dark-color;
+    float: left;
+    height: 75px;
+    position: absolute;
+    width: 75px;
+
+    img {
+      height: 75px;
+      width: 75px;
+    }
   }
+
+  @media (min-width: $large-screen) {
+    article {
+      min-height: 200px;
+    }
+
+    .description {
+      margin-left: 200px;
+
+      ul {
+        margin-left: 0;
+      }
+    }
+
+    .company-icon {
+      height: 200px;
+      width: 200px;
+
+      img {
+        height: 200px;
+        width: 200px;
+      }
+    }
+
+    .accomplishments .label {
+      display: none;
+    }
+  }
+
 }
 
 .contact-details {
@@ -315,13 +341,17 @@ body {
 
 .site-footer {
   border-top: 1px solid $footer-color;
-  line-height: $base-line-height * 1.5;
   margin: auto;
   margin-top: $base-line-height;
   min-height: $base-line-height * 4;
   padding-top: $base-line-height / 2;
   text-align: center;
   width: 90%;
+
+  .connect {
+    line-height: $base-line-height * 2;
+    margin-top: -$base-line-height / 2;
+  }
 
   @media (min-width: $medium-screen) {
     line-height: $base-line-height * 4;

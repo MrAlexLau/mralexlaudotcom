@@ -6,11 +6,7 @@ body {
   font-family: "Bitter", serif;
   font-size: 16px;
   height: 100%;
-  margin: 0;
-  background-color: white; }
-  @media (min-width: 540px) {
-    body {
-      background-color: white; } }
+  margin: 0; }
 
 .details {
   display: none; }
@@ -22,7 +18,7 @@ body {
   line-height: 48px;
   min-height: 48px;
   padding: 0 1em; }
-  @media (min-width: 540px) {
+  @media (min-width: 1220px) {
     .header {
       padding: 0 2em; } }
   .header .message {
@@ -30,7 +26,7 @@ body {
     float: left;
     font-size: 16px;
     font-style: italic; }
-    @media (min-width: 540px) {
+    @media (min-width: 1220px) {
       .header .message {
         font-size: 24px; } }
   .header .connect {
@@ -65,7 +61,7 @@ body {
 .main-content {
   margin: auto;
   width: 90%; }
-  @media (min-width: 540px) {
+  @media (min-width: 768px) {
     .main-content {
       width: 60%; } }
 
@@ -75,7 +71,7 @@ body {
   .profile-container .profile-picture {
     border-radius: 50%;
     width: 200px; }
-    @media (min-width: 540px) {
+    @media (min-width: 768px) {
       .profile-container .profile-picture {
         width: 300px; } }
 
@@ -92,8 +88,8 @@ body {
   margin: 12px 0.125em;
   padding: 0.5em 1.5em;
   text-decoration: none;
-  width: 75px; }
-  @media (min-width: 540px) {
+  width: 85px; }
+  @media (min-width: 1220px) {
     .menu a div {
       margin: 24px 0.5em;
       width: 100px; } }
@@ -113,7 +109,7 @@ body {
     display: table-cell; }
 .projects-details article .skills li {
   list-style-type: none; }
-@media (min-width: 540px) {
+@media (min-width: 1220px) {
   .projects-details article {
     display: table;
     width: 100%; }
@@ -152,10 +148,8 @@ body {
   position: relative; }
   .experience-details article,
   .projects-details article {
-    margin: 24px 0; }
+    margin: 36px 0; }
 
-.experience-details article {
-  min-height: 200px; }
 .experience-details .company-name {
   font-family: "Bitter", serif;
   font-size: 28px;
@@ -166,19 +160,37 @@ body {
   font-style: italic;
   margin: 0;
   opacity: 0.8; }
+.experience-details .description {
+  display: inline-block;
+  margin-left: 75px;
+  padding-left: 1em; }
+  .experience-details .description ul {
+    margin-left: -75px;
+    margin-top: 24px; }
 .experience-details .company-icon {
   background-color: #216274;
   float: left;
-  height: 200px;
+  height: 75px;
   position: absolute;
-  width: 200px; }
+  width: 75px; }
   .experience-details .company-icon img {
+    height: 75px;
+    width: 75px; }
+@media (min-width: 1220px) {
+  .experience-details article {
+    min-height: 200px; }
+  .experience-details .description {
+    margin-left: 200px; }
+    .experience-details .description ul {
+      margin-left: 0; }
+  .experience-details .company-icon {
     height: 200px;
     width: 200px; }
-.experience-details .description {
-  display: inline-block;
-  margin-left: 200px;
-  padding-left: 1em; }
+    .experience-details .company-icon img {
+      height: 200px;
+      width: 200px; }
+  .experience-details .accomplishments .label {
+    display: none; } }
 
 .contact-details .field {
   font-family: "Open Sans", sans-serif;
@@ -206,14 +218,16 @@ body {
 
 .site-footer {
   border-top: 1px solid #949494;
-  line-height: 36px;
   margin: auto;
   margin-top: 24px;
   min-height: 96px;
   padding-top: 12px;
   text-align: center;
   width: 90%; }
-  @media (min-width: 540px) {
+  .site-footer .connect {
+    line-height: 48px;
+    margin-top: -12px; }
+  @media (min-width: 768px) {
     .site-footer {
       line-height: 96px;
       margin-top: 96px;
@@ -223,7 +237,7 @@ body {
     font-family: "Open Sans", sans-serif;
     padding: 0 0.5em;
     text-decoration: none; }
-    @media (min-width: 540px) {
+    @media (min-width: 768px) {
       .site-footer .connect a {
         border-right: 1px solid #949494;
         padding: 0 1em; } }
