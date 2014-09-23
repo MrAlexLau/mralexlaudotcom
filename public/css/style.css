@@ -6,7 +6,11 @@ body {
   font-family: "Bitter", serif;
   font-size: 16px;
   height: 100%;
-  margin: 0; }
+  margin: 0;
+  background-color: white; }
+  @media (min-width: 540px) {
+    body {
+      background-color: white; } }
 
 .details {
   display: none; }
@@ -24,8 +28,11 @@ body {
   .header .message {
     color: #FFFFFF;
     float: left;
-    font-size: 24px;
+    font-size: 16px;
     font-style: italic; }
+    @media (min-width: 540px) {
+      .header .message {
+        font-size: 24px; } }
   .header .connect {
     text-align: right; }
     .header .connect a {
@@ -95,23 +102,35 @@ body {
   color: #216274;
   font-weight: bold; }
 
-.projects-details article {
-  display: table;
-  width: 100%; }
-  .projects-details article .overview, .projects-details article .skills {
+.projects-details article .skills {
+  margin-top: 12px; }
+  .projects-details article .skills ul {
+    display: table;
+    margin: 0;
+    padding: 12px 0;
+    width: 100%; }
+  .projects-details article .skills li {
     display: table-cell; }
-  .projects-details article .overview {
-    padding-right: 1em;
-    width: 70%; }
-  .projects-details article .skills {
-    border-left: 1px solid #949494;
-    padding-left: 1em;
-    width: 30%; }
-    .projects-details article .skills ul {
-      padding: 0.5em; }
-    .projects-details article .skills li {
-      list-style-type: none;
-      margin-bottom: 12px; }
+.projects-details article .skills li {
+  list-style-type: none; }
+@media (min-width: 540px) {
+  .projects-details article {
+    display: table;
+    width: 100%; }
+    .projects-details article .overview, .projects-details article .skills {
+      display: table-cell; }
+    .projects-details article .overview {
+      padding-right: 1em;
+      width: 70%; }
+    .projects-details article .skills {
+      border-left: 1px solid #949494;
+      padding-left: 1em;
+      width: 30%; }
+      .projects-details article .skills ul {
+        padding: 0.5em; }
+      .projects-details article .skills li {
+        display: list-item;
+        margin-bottom: 12px; } }
 .projects-details a {
   text-decoration: none;
   color: #216274; }

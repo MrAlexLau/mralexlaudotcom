@@ -23,6 +23,11 @@ body {
   font-size: $base-font-size;
   height: 100%;
   margin: 0;
+
+  background-color: white;
+  @media (min-width: $medium-screen) {
+    background-color: white;
+  }
 }
 
 .details {
@@ -46,8 +51,12 @@ body {
   .message {
     color: #FFFFFF;
     float: left;
-    font-size: $base-font-size * 1.5;
+    font-size: $base-font-size;
     font-style: italic;
+
+    @media (min-width: $medium-screen) {
+      font-size: $base-font-size * 1.5;
+    }
   }
 
   .connect {
@@ -147,30 +156,50 @@ body {
 
 .projects-details {
   article {
-    display: table;
-    width: 100%;
-
-    .overview, .skills {
-      display: table-cell;
-    }
-
-    .overview {
-      padding-right: $gutter;
-      width: 70%;
-    }
-
     .skills {
-      border-left: 1px solid $footer-color;
-      padding-left: $gutter;
-      width: 30%;
+      margin-top: $base-line-height / 2;
 
       ul {
-        padding: $gutter / 2;
+        display: table;
+        margin: 0;
+        padding: ($base-line-height / 2) 0;
+        width: 100%;
+      }
+      li {
+        display: table-cell;
+      }
+    }
+
+    .skills li {
+      list-style-type: none;
+    }
+
+    @media (min-width: $medium-screen) {
+      display: table;
+      width: 100%;
+
+      .overview, .skills {
+        display: table-cell;
       }
 
-      li {
-        list-style-type: none;
-        margin-bottom: $base-line-height / 2;
+      .overview {
+        padding-right: $gutter;
+        width: 70%;
+      }
+
+      .skills {
+        border-left: 1px solid $footer-color;
+        padding-left: $gutter;
+        width: 30%;
+
+        ul {
+          padding: $gutter / 2;
+        }
+
+        li {
+          display: list-item;
+          margin-bottom: $base-line-height / 2;
+        }
       }
     }
   }
